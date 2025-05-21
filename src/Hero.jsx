@@ -4,11 +4,10 @@ function Hero() {
       className="relative flex flex-col items-center justify-center h-screen bg-cover bg-no-repeat text-center px-4"
       style={{
         backgroundImage: `url('/assets/background.png')`,
-        backgroundPosition: 'center 40%',
+        backgroundPosition: '55% 40%',  // shift right + slightly up
         backgroundSize: 'cover',
       }}
     >
-      {/* Optional: Semi-transparent overlay */}
       <div className="absolute inset-0 bg-white/30 z-0"></div>
 
       <div className="relative z-10">
