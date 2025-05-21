@@ -1,26 +1,34 @@
 function Hero() {
   return (
     <div
-      className="relative flex flex-col items-center justify-center h-screen bg-cover bg-no-repeat text-center px-4"
+      className="relative flex flex-col items-center justify-center h-screen bg-none bg-cover bg-center text-center px-4"
       style={{
-        backgroundImage: `url('/assets/background.png')`,
-        backgroundPosition: '55% 40%',  // shift right + slightly up
-        backgroundSize: 'cover',
+        backgroundImage: `url(${import.meta.env.BASE_URL}assets/background.png)`,
       }}
     >
-      <div className="absolute inset-0 bg-white/30 z-0"></div>
+      {/* White overlay for readability */}
+      <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
 
+      {/* Hero content */}
       <div className="relative z-10">
-        <h1 className="text-5xl font-bold text-teal-700 mb-4 drop-shadow-lg">
+        <h1
+          className="text-6xl mb-4 text-teal-700"
+          style={{ fontFamily: "'Monsieur La Doulaise', cursive" }}
+        >
           Hi, I'm Autumn Anderson!
         </h1>
-        <p className="text-xl text-teal-600 mb-8 drop-shadow-md">
+
+        <p
+          className="text-xl text-teal-600 mb-8"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
           Self-taught. Coffee-fueled. Pursuing my passions.
         </p>
 
         <a
           href="#resume"
-          className="bg-teal-600 text-white px-6 py-3 rounded-full hover:bg-teal-500 transition shadow-md"
+          className="bg-teal-600 text-white px-6 py-3 rounded-full hover:bg-teal-500 transition text-lg"
+          style={{ fontFamily: "'Playfair Display', serif" }}
         >
           View My Resume
         </a>
