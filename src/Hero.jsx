@@ -6,10 +6,9 @@ function Hero() {
         backgroundImage: `url(${import.meta.env.BASE_URL}assets/background.png)`,
       }}
     >
-      {/* White overlay for readability */}
-      <div className="absolute inset-0 bg-white/60 backdrop-blur-sm"></div>
+      {/* Optional: soft overlay (not blurred) */}
+      <div className="absolute inset-0 bg-white/30"></div>
 
-      {/* Hero content */}
       <div className="relative z-10">
         <h1
           className="text-6xl mb-4 text-teal-700"
@@ -38,3 +37,4 @@ function Hero() {
 }
 
 export default Hero;
+
